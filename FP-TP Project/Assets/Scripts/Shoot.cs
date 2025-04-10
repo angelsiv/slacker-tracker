@@ -43,7 +43,7 @@ public class Shoot : MonoBehaviour {
         {
             //new GameObject foamBullet is created
             GameObject foamBullet = Instantiate(bullet, gunEnd.transform.position, gunEnd.transform.rotation);
-            foamBullet.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.forward * firingSpeed);
+            foamBullet.GetComponent<Rigidbody>().linearVelocity = transform.TransformDirection(Vector3.forward * firingSpeed);
             
             Destroy(foamBullet, 3.0f);
         }
